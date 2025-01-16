@@ -1,0 +1,16 @@
+# Install and setup Zig environment in Linux
+
+# Download the Zig compiler (development build) from the official website
+wget https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2643+fb43e91b2.tar.xz
+
+# Extract the downloaded tar.xz archive (compressed file)
+tar -xf zig-linux-x86_64-0.14.0-dev.2643+fb43e91b2.tar.xz
+
+# Move the extracted Zig folder to a directory named `local_zig` (can be used for local Zig builds)
+sudo mv zig-linux-x86_64-0.14.0-dev.2643+fb43e91b2 local_zig
+
+# Create a symbolic link to the Zig binary in `/usr/bin/` for easy global access to `zig` command
+sudo ln -s /workspaces/Zig100Days/local_zig/zig /usr/bin/zig
+
+# Ensure that the Zig binary is executable by changing its permissions
+sudo chmod +x /usr/local/zig/zig
